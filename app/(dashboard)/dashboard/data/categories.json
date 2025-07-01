@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "Electronics",
+    "slug": "electronics",
+    "image": "/placeholder.svg?height=200&width=200"
+  },
+  {
+    "id": "2",
+    "name": "Clothing",
+    "slug": "clothing",
+    "image": "/placeholder.svg?height=200&width=200"
+  },
+  {
+    "id": "3",
+    "name": "Home & Garden",
+    "slug": "home-garden",
+    "image": "/placeholder.svg?height=200&width=200"
+  },
+  {
+    "id": "4",
+    "name": "Sports & Outdoors",
+    "slug": "sports-outdoors",
+    "image": "/placeholder.svg?height=200&width=200"
+  },
+  {
+    "id": "5",
+    "name": "Books",
+    "slug": "books",
+    "image": "/placeholder.svg?height=200&width=200"
+  },
+  {
+    "id": "6",
+    "name": "Beauty & Health",
+    "slug": "beauty-health",
+    "image": "/placeholder.svg?height=200&width=200"
+  },
+  {
+    "id": "7",
+    "name": "Toys & Games",
+    "slug": "toys-games",
+    "image": "/placeholder.svg?height=200&width=200"
+  },
+  {
+    "id": "8",
+    "name": "Automotive",
+    "slug": "automotive",
+    "image": "/placeholder.svg?height=200&width=200"
+  },
+  {
+    "id": "9",
+    "name": "Food & Beverages",
+    "slug": "food-beverages",
+    "image": "/placeholder.svg?height=200&width=200"
+  },
+  {
+    "id": "10",
+    "name": "Pet Supplies",
+    "slug": "pet-supplies",
+    "image": "/placeholder.svg?height=200&width=200"
+  }
+]

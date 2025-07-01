@@ -1,0 +1,162 @@
+[
+  {
+    "id": "1",
+    "name": "iPhone 15 Pro",
+    "description": "Latest iPhone with advanced camera system and A17 Pro chip",
+    "price": 999.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "1"
+  },
+  {
+    "id": "2",
+    "name": "Samsung Galaxy S24",
+    "description": "Flagship Android phone with AI-powered features",
+    "price": 899.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "1"
+  },
+  {
+    "id": "3",
+    "name": "MacBook Air M3",
+    "description": "Ultra-thin laptop with M3 chip and all-day battery life",
+    "price": 1299.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "1"
+  },
+  {
+    "id": "4",
+    "name": "Nike Air Max 270",
+    "description": "Comfortable running shoes with Max Air cushioning",
+    "price": 149.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "2"
+  },
+  {
+    "id": "5",
+    "name": "Levi's 501 Jeans",
+    "description": "Classic straight-fit jeans in premium denim",
+    "price": 89.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "2"
+  },
+  {
+    "id": "6",
+    "name": "Adidas Ultraboost 22",
+    "description": "High-performance running shoes with Boost technology",
+    "price": 189.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "2"
+  },
+  {
+    "id": "7",
+    "name": "KitchenAid Stand Mixer",
+    "description": "Professional-grade stand mixer for baking enthusiasts",
+    "price": 379.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "3"
+  },
+  {
+    "id": "8",
+    "name": "Dyson V15 Vacuum",
+    "description": "Cordless vacuum with laser dust detection",
+    "price": 749.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "3"
+  },
+  {
+    "id": "9",
+    "name": "Instant Pot Duo 7-in-1",
+    "description": "Multi-functional pressure cooker and slow cooker",
+    "price": 99.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "3"
+  },
+  {
+    "id": "10",
+    "name": "Wilson Tennis Racket",
+    "description": "Professional tennis racket for intermediate players",
+    "price": 199.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "4"
+  },
+  {
+    "id": "11",
+    "name": "Coleman Camping Tent",
+    "description": "4-person waterproof tent for outdoor adventures",
+    "price": 159.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "4"
+  },
+  {
+    "id": "12",
+    "name": "Yeti Cooler 45",
+    "description": "Heavy-duty cooler that keeps ice for days",
+    "price": 349.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "4"
+  },
+  {
+    "id": "13",
+    "name": "The Great Gatsby",
+    "description": "Classic American novel by F. Scott Fitzgerald",
+    "price": 12.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "5"
+  },
+  {
+    "id": "14",
+    "name": "Atomic Habits",
+    "description": "Self-help book about building good habits",
+    "price": 16.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "5"
+  },
+  {
+    "id": "15",
+    "name": "Kindle Paperwhite",
+    "description": "Waterproof e-reader with adjustable warm light",
+    "price": 139.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "5"
+  },
+  {
+    "id": "16",
+    "name": "Olay Regenerist Serum",
+    "description": "Anti-aging serum with niacinamide and peptides",
+    "price": 28.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "6"
+  },
+  {
+    "id": "17",
+    "name": "Fitbit Charge 5",
+    "description": "Advanced fitness tracker with built-in GPS",
+    "price": 199.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "6"
+  },
+  {
+    "id": "18",
+    "name": "Neutrogena Sunscreen SPF 50",
+    "description": "Broad-spectrum sunscreen for daily protection",
+    "price": 9.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "6"
+  },
+  {
+    "id": "19",
+    "name": "LEGO Creator Expert Set",
+    "description": "Advanced building set for adult LEGO enthusiasts",
+    "price": 249.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "7"
+  },
+  {
+    "id": "20",
+    "name": "Nintendo Switch OLED",
+    "description": "Gaming console with vibrant OLED screen",
+    "price": 349.99,
+    "image": "/placeholder.svg?height=300&width=300",
+    "categoryId": "7"
+  }
+]
