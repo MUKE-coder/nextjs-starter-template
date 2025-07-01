@@ -6,6 +6,7 @@ import {
   Product,
   CreateCategoryRequest,
   PaginatedResponse,
+  StatsData,
 } from "@/types/types";
 
 const API_BASE_URL =
@@ -133,5 +134,22 @@ export async function getProductsByCategory(
   } catch (error) {
     console.error("Error fetching products by category:", error);
     throw new Error("Failed to fetch products by category");
+  }
+}
+
+export async function getStats(): Promise<StatsData> {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/stats`, {
+      cache: "no-store",
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch stats");
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching stats:", error);
+    throw new Error("Failed to fetch stats");
   }
 }

@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   ChevronRight,
-  Menu,
-  X,
+  Copy,
   Check,
   ShoppingCart,
   LayoutDashboard,
@@ -13,228 +12,264 @@ import {
   List,
   Layers,
   Palette,
+  Zap,
+  Sparkles,
+  ArrowRight,
+  Terminal,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
+import { InstallCommandCard } from "@/components/InstallmentCommand";
 
 export default function HeroProductShowcase() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrolled]);
-
   const features = [
-    { name: "API Routes", icon: <Code className="w-5 h-5 text-indigo-600" /> },
+    {
+      name: "API Routes",
+      icon: <Code className="w-6 h-6" />,
+      description: "Built-in API endpoints",
+    },
     {
       name: "Server Actions",
-      icon: <Database className="w-5 h-5 text-indigo-600" />,
+      icon: <Database className="w-6 h-6" />,
+      description: "Server-side functionality",
     },
     {
       name: "React Query",
-      icon: <Layers className="w-5 h-5 text-indigo-600" />,
-    },
-    {
-      name: "Products Listing",
-      icon: <List className="w-5 h-5 text-indigo-600" />,
-    },
-    {
-      name: "Category Pages",
-      icon: <List className="w-5 h-5 text-indigo-600" />,
-    },
-    {
-      name: "Dashboard",
-      icon: <LayoutDashboard className="w-5 h-5 text-indigo-600" />,
+      icon: <Layers className="w-6 h-6" />,
+      description: "Data fetching & caching",
     },
     {
       name: "shadcn/ui",
-      icon: <Palette className="w-5 h-5 text-indigo-600" />,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: <Palette className="w-5 h-5 text-indigo-600" />,
+      icon: <Palette className="w-6 h-6" />,
+      description: "Beautiful components",
     },
   ];
 
   const pages = [
-    "Products Listing Page",
-    "Product Detail Page",
-    "Category Listing Page",
-    "Category Detail Page",
+    "Products & Categories",
     "Admin Dashboard",
-    "API Routes Examples",
-    "Server Actions Examples",
-    "React Query Examples",
+    "API Examples",
+    "Server Actions",
+    "React Query Setup",
+    "Authentication Ready",
   ];
 
   return (
-    <div className="bg-white min-h-screen text-gray-900 overflow-hidden">
-      <main>
-        <div className="relative">
-          {/* Gradient background effects */}
-          <div className="absolute top-40 -left-40 w-80 h-80 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
-          <div className="absolute top-0 -right-20 w-80 h-80 bg-yellow-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-40 left-20 w-80 h-80 bg-pink-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
+    <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 min-h-screen text-slate-900 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-32 w-96 h-96 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/3 -left-32 w-80 h-80 bg-gradient-to-br from-indigo-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      </div>
 
-          <div className="max-w-7xl mx-auto px-4 py-28 sm:px-6 lg:px-8 relative z-10 pt-32 pb-16 sm:pb-32">
-            {/* Announcement badge */}
-            <div className="mx-auto max-w-fit mb-10">
-              <Badge className="bg-indigo-100 text-indigo-800 hover:bg-indigo-100">
-                <span className="font-medium">Next.js 15 Ready</span>
-                <ChevronRight className="w-4 h-4 ml-1" />
-              </Badge>
+      <main className="relative z-10">
+        {/* Hero Section */}
+        <div className="max-w-7xl mx-auto px-6 py-20 sm:px-8 lg:px-12">
+          {/* Announcement badge */}
+          <div className="flex justify-center mb-8">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200 shadow-sm">
+              <Sparkles className="w-4 h-4 text-indigo-600" />
+              <span className="text-sm font-medium text-slate-700">
+                Next.js 15 Ready
+              </span>
+              <ChevronRight className="w-4 h-4 text-slate-400" />
             </div>
+          </div>
 
-            {/* Hero content */}
-            <div className="text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl max-w-4xl mx-auto">
-                Simple Next.js Starter Kit
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
-                Everything you need to build modern web applications with
-                Next.js, TypeScript, and shadcn/ui.
-              </p>
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button asChild>
-                  <Link href="/dashboard">Dashboard</Link>
-                </Button>
-                <Button variant="outline" asChild>
-                  <Link href="/store">
-                    <ShoppingCart className="w-4 h-4 mr-2" /> Visit store
-                  </Link>
-                </Button>
-              </div>
+          {/* Hero content */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-slate-900 via-slate-800 to-slate-600 bg-clip-text text-transparent mb-6">
+              Next.js Starter
+              <br />
+              <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                Redefined
+              </span>
+            </h1>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-12 leading-relaxed">
+              Beautiful, fast, and production-ready. Everything you need to
+              build modern web applications with elegance.
+            </p>
+
+            {/* Installation command - using the new InstallCommandCard */}
+            <InstallCommandCard />
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <button className="group relative px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <span className="flex items-center gap-2">
+                  <LayoutDashboard className="w-5 h-5" />
+                  View Dashboard
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </button>
+              <button className="px-8 py-4 bg-white/80 backdrop-blur-sm text-slate-700 rounded-xl font-semibold border border-slate-200 hover:bg-white hover:shadow-lg transition-all duration-300">
+                <span className="flex items-center gap-2">
+                  <ShoppingCart className="w-5 h-5" />
+                  Visit Store
+                </span>
+              </button>
             </div>
+          </div>
 
-            {/* Product showcase */}
-            <div className="mt-16 sm:mt-20 max-w-5xl mx-auto">
-              <Card className="w-full rounded-xl overflow-hidden">
-                {/* Dashboard UI mockup */}
-                <div className="flex flex-col h-96 sm:h-[420px]">
-                  {/* Header */}
-                  <div className="flex items-center justify-between border-b p-4 bg-gray-50">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                    </div>
-                    <div className="text-sm font-medium text-gray-900">
-                      Dashboard
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-4 h-4 bg-gray-300 rounded"></div>
-                      <div className="w-4 h-4 bg-gray-300 rounded"></div>
-                      <div className="w-4 h-4 bg-gray-300 rounded"></div>
+          {/* Rest of your existing code remains unchanged... */}
+          {/* Product showcase */}
+          <div className="max-w-6xl mx-auto">
+            <div className="relative group">
+              <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-80 transition duration-1000"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/50">
+                {/* Browser header */}
+                <div className="flex items-center justify-between px-6 py-4 bg-slate-50/80 border-b border-slate-200">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                  </div>
+                  <div className="text-sm font-medium text-slate-600 bg-white px-3 py-1 rounded-lg">
+                    localhost:3000/dashboard
+                  </div>
+                  <div className="w-16"></div>
+                </div>
+
+                {/* Dashboard mockup */}
+                <div className="flex h-80 sm:h-96">
+                  {/* Sidebar */}
+                  <div className="w-56 hidden sm:block bg-slate-50/50 border-r border-slate-200 p-6">
+                    <div className="space-y-3">
+                      {["Dashboard", "Products", "Analytics", "Settings"].map(
+                        (item, i) => (
+                          <div
+                            key={item}
+                            className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/60 transition-colors"
+                          >
+                            <div
+                              className={`w-2 h-2 rounded-full ${
+                                i === 0 ? "bg-indigo-500" : "bg-slate-300"
+                              }`}
+                            ></div>
+                            <div
+                              className={`text-sm font-medium ${
+                                i === 0 ? "text-slate-900" : "text-slate-500"
+                              }`}
+                            >
+                              {item}
+                            </div>
+                          </div>
+                        )
+                      )}
                     </div>
                   </div>
 
-                  {/* Content */}
-                  <div className="flex flex-1 overflow-hidden">
-                    {/* Sidebar */}
-                    <div className="w-48 hidden sm:block border-r bg-gray-50 p-4">
-                      <div className="space-y-4">
-                        {[
-                          "Dashboard",
-                          "Products",
-                          "Categories",
-                          "Orders",
-                          "Customers",
-                          "Settings",
-                        ].map((item) => (
-                          <div key={item} className="flex items-center">
-                            <div className="h-4 w-4 bg-gray-300 rounded mr-3"></div>
-                            <div className="h-3 w-20 bg-gray-300 rounded"></div>
+                  {/* Main content */}
+                  <div className="flex-1 p-6 bg-gradient-to-br from-white to-slate-50/50">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                      {[
+                        {
+                          label: "Revenue",
+                          value: "$12,426",
+                          color: "from-green-400 to-green-600",
+                        },
+                        {
+                          label: "Orders",
+                          value: "247",
+                          color: "from-blue-400 to-blue-600",
+                        },
+                        {
+                          label: "Users",
+                          value: "1,893",
+                          color: "from-purple-400 to-purple-600",
+                        },
+                      ].map((stat, i) => (
+                        <div
+                          key={i}
+                          className="bg-white rounded-xl p-4 shadow-sm border border-slate-100"
+                        >
+                          <div className="text-sm text-slate-500 mb-1">
+                            {stat.label}
                           </div>
-                        ))}
-                      </div>
+                          <div
+                            className={`text-2xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}
+                          >
+                            {stat.value}
+                          </div>
+                        </div>
+                      ))}
                     </div>
-
-                    {/* Main content */}
-                    <div className="flex-1 bg-white p-6">
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {[1, 2, 3].map((i) => (
-                          <Card key={i} className="p-4 h-32 bg-gray-50">
-                            <div className="h-4 w-24 bg-gray-300 rounded mb-3"></div>
-                            <div className="h-6 w-16 bg-gray-200 rounded"></div>
-                          </Card>
-                        ))}
+                    <div className="bg-white rounded-xl h-32 border border-slate-100 shadow-sm flex items-center justify-center">
+                      <div className="text-slate-400 text-sm">
+                        Chart visualization area
                       </div>
-                      <div className="mt-6 h-48 bg-gray-50 rounded-lg"></div>
                     </div>
                   </div>
                 </div>
-              </Card>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Features Section */}
-        <section id="features" className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 bg-white/50 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900">Key Features</h2>
-              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                Everything you need to build modern web applications
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">
+                Built for{" "}
+                <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                  Developers
+                </span>
+              </h2>
+              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+                Everything you need, nothing you don't. Carefully crafted for
+                the modern web.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <Card
+                <div
                   key={index}
-                  className="p-6 hover:shadow-md transition-shadow"
+                  className="group relative p-8 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:border-indigo-200 transition-all duration-300"
                 >
-                  <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-indigo-50 mb-4">
+                  <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-slate-900 mb-2">
                     {feature.name}
                   </h3>
-                  <p className="text-gray-600">
-                    Pre-configured and ready to use
-                  </p>
-                </Card>
+                  <p className="text-slate-600">{feature.description}</p>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* Pages Section */}
-        <section id="pages" className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+          <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900">
-                Included Pages
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">
+                Everything{" "}
+                <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                  Included
+                </span>
               </h2>
-              <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                All these pages are pre-built and ready to customize
+              <p className="text-xl text-slate-600">
+                All essential pages and components, pre-built and ready to
+                customize
               </p>
             </div>
 
-            <div className="max-w-3xl mx-auto">
-              <Card className="p-6">
-                <ul className="space-y-3">
-                  {pages.map((page, index) => (
-                    <li key={index} className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700">{page}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
+            <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {pages.map((page, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors"
+                  >
+                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600">
+                      <Check className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="text-slate-700 font-medium">{page}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

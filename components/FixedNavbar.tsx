@@ -35,8 +35,8 @@ export default function FixedNavbar() {
       title: "Pages",
     },
     {
-      href: "#",
-      title: "Documentation",
+      href: "/dashboard",
+      title: "Dashboard",
     },
   ];
   return (

@@ -26,3 +26,28 @@ export interface PaginatedResponse<T> {
   nextCursor?: string;
   total: number;
 }
+
+export interface StatsData {
+  totalCategories: number;
+  totalProducts: number;
+  productsPerCategory: Array<{
+    categoryId: string;
+    categoryName: string;
+    productCount: number;
+  }>;
+  priceStats: {
+    min: number;
+    max: number;
+    average: number;
+  };
+  lastUpdated: string;
+}
+
+export interface StatCard {
+  title: string;
+  value: string;
+  change: number;
+  trend: "up" | "down";
+  description: string;
+  footer: string;
+}
